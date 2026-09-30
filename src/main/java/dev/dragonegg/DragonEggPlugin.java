@@ -39,6 +39,8 @@ public class DragonEggPlugin extends JavaPlugin implements Listener {
     /** Amplifier 1 = level II */
     private static final int AMP = 1;
 
+    private LegendaryManager legendary;
+
     private static final PotionEffectType[] TYPES = {
             PotionEffectType.STRENGTH,
             PotionEffectType.SPEED,
@@ -49,6 +51,7 @@ public class DragonEggPlugin extends JavaPlugin implements Listener {
     @Override
     public void onEnable() {
         getServer().getPluginManager().registerEvents(this, this);
+        legendary = new LegendaryManager(this);
 
         // give/remove powers twice a second
         getServer().getScheduler().runTaskTimer(this, this::tickPlayers, 20L, 10L);
@@ -61,6 +64,11 @@ public class DragonEggPlugin extends JavaPlugin implements Listener {
                 protect(i);
             }
         }
+    }
+
+    @Override
+    public void onDisable() {
+        if (legendary != null) legendary.shutdown();
     }
 
     // ------------------------------------------------------------------ helpers

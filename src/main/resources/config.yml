@@ -1,0 +1,18 @@
+# Seconds between an operator running /legendary spawn and the item appearing
+countdown-seconds: 600
+
+# Tell everyone the coordinates in the countdown / spawn messages
+announce-coordinates: true
+
+# What the Fork does to a blocking shield: "destroy" (shield is removed) or "disable" (10 second cooldown)
+shield-mode: destroy
+
+hammer:
+  glowing-seconds: 10
+  levitation-seconds: 3
+
+ban:
+  netherite-crafting: true   # no crafting netherite ingots/blocks/templates, no smithing up to netherite
+  normal-tridents: true      # normal tridents are deleted / can't be used
+  normal-maces: true         # normal maces are deleted / can't be crafted
+  knockback-2: true          # Knockback II can't come from an anvil or enchanting table

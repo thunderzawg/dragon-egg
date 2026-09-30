@@ -1,5 +1,14 @@
 name: DragonEggPowers
-version: '1.0'
+version: '2.0'
 main: dev.dragonegg.DragonEggPlugin
 api-version: '1.21'
-description: Dragon Egg gives powers, can't be stored, and can't be destroyed.
+description: Dragon Egg powers plus the Legendary weapons (Tunic, Fork, Griffin, The Hammer).
+commands:
+  legendary:
+    description: Spawn and manage the legendary items
+    usage: /legendary <spawn|cancel|status>
+    permission: legendary.admin
+permissions:
+  legendary.admin:
+    description: Use /legendary
+    default: op
