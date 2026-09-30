@@ -1,0 +1,5 @@
+name: DragonEggPowers
+version: '1.0'
+main: dev.dragonegg.DragonEggPlugin
+api-version: '1.21'
+description: Dragon Egg gives powers, can't be stored, and can't be destroyed.
